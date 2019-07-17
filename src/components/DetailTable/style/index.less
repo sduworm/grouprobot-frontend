@@ -1,0 +1,49 @@
+:global {
+  .kb-detail-table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 12px;
+    line-height: 18px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    & > tbody > tr {
+      &:not(:first-of-type) > td.kb-detail-table-empty {
+        border-left: 1px solid #f0f0f0;
+      }
+      &:not(:last-child) > td {
+        border-bottom: 1px solid #f0f0f0;
+      }
+      & > td {
+        padding: 10px 8px;
+        border: none;
+        &:not(:first-of-type):not(.kb-detail-table-empty) {
+          border-left: 1px solid #f0f0f0;
+        }
+      }
+    }
+    td .ant-form-item-children {
+      input {
+        font-size: 12px;
+      }
+      .ant-select {
+        font-size: 12px;
+      }
+      .ant-radio-group {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    td.kb-detail-table-label {
+      width: 13%;
+      text-align: right;
+      color: #999;
+      background-color: #f9f9f9;
+    }
+    td.kb-detail-table-value {
+      width: calc(61% / 3);
+    }
+  }
+}

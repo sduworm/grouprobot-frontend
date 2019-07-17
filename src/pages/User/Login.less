@@ -1,0 +1,117 @@
+@import '~antd/lib/style/themes/default.less';
+
+.main {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  height: 100%;
+  min-height: 612px;
+  background-size: 100% 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  .contentBackground {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .content {
+      width: 1150px;
+      margin: auto auto;
+      display: flex;
+      padding-top: 65px;
+      .textContent {
+        flex: 2;
+        padding-top: 95px;
+        font-size: 50px;
+        color: #fff;
+        .cutDiv {
+          width: 40px;
+          height: 6px;
+          background-color: white;
+          margin-bottom: 15px;
+        }
+        .chineseText {
+          line-height: 70px;
+        }
+        .englishText {
+          opacity: 0.8;
+          font-size: 20px;
+          display: inherit;
+        }
+      }
+      .formContainer {
+        flex: 1;
+        .formContent {
+          width: 344px;
+          float: right;
+          background-color: white;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: rgb(102, 102, 102);
+  text-transform: uppercase;
+  padding: 20px 15px;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+.form {
+  width: 304px;
+  margin: auto;
+  padding: 20px 0;
+  :global {
+    .ant-form .ant-form-item {
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+    .ant-input-lg {
+      font-size: 12px;
+    }
+  }
+  .label {
+    line-height: 1.7;
+    font-size: 15px;
+    color: rgb(130, 130, 130);
+    margin-bottom: 8px;
+  }
+  .other {
+    text-align: left;
+    line-height: 22px;
+    .register {
+      float: right;
+    }
+  }
+
+  .main-links {
+    line-height: 22px;
+    display: flex;
+    a {
+      flex: 1;
+      color: #999;
+      font-size: 12px;
+      &:hover {
+        color: #1890ff;
+      }
+    }
+    .register {
+      text-align: left;
+    }
+    .activate {
+      text-align: center;
+    }
+    .password {
+      text-align: right;
+    }
+  }
+}

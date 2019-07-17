@@ -1,0 +1,69 @@
+@import '~antd/dist/antd.less';
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// 重写antd样式
+:global {
+  // 如果antd自身修复了 效验错误的提示框焦点移上去会变蓝色的border 则移除
+  .has-error .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled):focus {
+    border-color: #f5222d;
+  }
+  .ant-upload-list-picture-card {
+    .ant-upload-list-item-info:before {
+      height: 40%;
+      bottom: 0;
+    }
+    .ant-upload-list-item-actions {
+      top: auto;
+      bottom: 3px;
+      & > :not(:last-child) {
+        padding-right: 20px;
+      }
+    }
+  }
+  // 表单
+  .ant-form,
+  .ant-form-inline {
+    .ant-form-item {
+      .ant-form-item-label {
+        label:after {
+          margin: 0 16px 0 2px;
+        }
+      }
+    }
+  }
+
+  .oneColForm {
+    max-width: 720px;
+    .ant-form-item-control-wrapper {
+      max-width: 360px;
+    }
+  }
+}

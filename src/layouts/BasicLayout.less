@@ -1,0 +1,67 @@
+:global {
+  #root {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .ant-menu-submenu > .ant-menu {
+    background-color: white;
+  }
+}
+
+.common {
+  min-width: 1224px;
+  :global {
+    :not(.metadata-dom) {
+      .ant-btn-lg {
+        height: 40px;
+      }
+    }
+    // 表单
+    .ant-form,
+    .ant-form-inline {
+      .ant-form-item {
+        margin-bottom: 20px;
+        .ant-form-item-label {
+          line-height: 32px;
+          padding-left: 20px;
+          padding-bottom: 0;
+          label {
+            margin-bottom: 0;
+            font-weight: normal !important;
+          }
+          label:after {
+            margin: 0 16px 0 2px;
+          }
+        }
+        .ant-form-item-control-wrapper {
+          min-height: 32px;
+        }
+        .ant-form-item-control {
+          vertical-align: middle;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+.contentContainer {
+  margin-top: 10px;
+}
+.fixedContentContainer {
+  margin-top: 74px;
+}
+
+.rightContent {
+  background-color: white;
+  overflow: hidden;
+}
+
+.innerContent {
+  background-color: white;
+}
+
+.bkColor {
+  background-color: rgb(244, 244, 244);
+}

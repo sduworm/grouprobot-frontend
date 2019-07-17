@@ -1,0 +1,74 @@
+@import '~antd/lib/style/themes/default.less';
+
+.result {
+  text-align: center;
+  width: 72%;
+  margin: 0 auto;
+  @media screen and (max-width: @screen-xs) {
+    width: 100%;
+  }
+  .headContainer {
+    display: table;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    .icon {
+      font-size: 45px;
+      line-height: 45px;
+      margin-top: -9px;
+      margin-right: 20px;
+      width: 45px;
+      height: 45px;
+      float: left;
+      & > .success {
+        color: @success-color;
+      }
+
+      & > .error {
+        color: @error-color;
+      }
+      & > .warning {
+        color: @warning-color;
+      }
+    }
+    .titleContainer {
+      float: left;
+      .title {
+        font-size: 20px;
+        color: @heading-color;
+        line-height: 32px;
+        max-width: 800px;
+        text-align: left;
+      }
+
+      .description {
+        font-size: 14px;
+        line-height: 22px;
+        color: @text-color-secondary;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .extra {
+    background: #fafafa;
+    padding: 24px 40px;
+    border-radius: @border-radius-sm;
+    text-align: left;
+
+    @media screen and (max-width: @screen-xs) {
+      padding: 18px 20px;
+    }
+  }
+
+  .actions {
+    float: left;
+    margin-top: 40px;
+    button {
+      font-size: 14px;
+      width: 150px;
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+}

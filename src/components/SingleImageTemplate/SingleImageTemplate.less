@@ -1,0 +1,27 @@
+@sm-height: 620px;
+@md-height: 920px;
+@bg-height: 1280px;
+
+.imgModal {
+  max-width: 1000px;
+  min-width: 520px;
+  .imgContainer {
+    @media screen and (max-height: @sm-height) {
+      max-height: 400px;
+    }
+    @media screen and (min-height: @sm-height) {
+      max-height: 500px;
+    }
+    @media screen and (min-height: @md-height) {
+      max-height: 780px;
+    }
+    @media screen and (min-height: @bg-height) {
+      max-height: 1100px;
+    }
+    margin-top: 20px;
+    overflow-y: auto;
+    .img {
+      width: 100%;
+    }
+  }
+}
