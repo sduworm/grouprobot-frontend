@@ -1,3 +1,4 @@
+import querystring from 'querystring';
 import { queryNotices } from '@/services/api';
 
 const AVAILABLE_BASE_MENU = ['/paas', '/settings'];
@@ -78,6 +79,12 @@ export default {
       return history.listen(({ pathname, search }) => {
         if (typeof window.ga !== 'undefined') {
           window.ga('send', 'pageview', pathname + search);
+        }
+        if (['/scan/dingtalk'].includes(pathname)) {
+          dispatch({
+            type: 'login/scanLogin',
+            payload: querystring.parse(search.replace('?', ''))
+          });
         }
         if (['/paas/basicInfo', '/paas/link'].includes(pathname)) {
           dispatch({
