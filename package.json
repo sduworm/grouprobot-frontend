@@ -37,7 +37,7 @@
     "invariant": "latest",
     "isomorphic-fetch": "2.2.1",
     "locks": "0.2.2",
-    "lodash": "4.17.11",
+    "lodash": "4.17.15",
     "lodash-decorators": "6.0.1",
     "memoize-one": "5.0.0",
     "moment": "2.24.0",
